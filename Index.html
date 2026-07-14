@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد سعيد يا ماريا! 🎂</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background: linear-gradient(135deg, #fdf6e3, #fae5d3); 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            margin: 0;
+        }
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 80%;
+        }
+        h1 { color: #d35400; font-size: 2.5em; margin-bottom: 20px; }
+        p { color: #555; font-size: 1.3em; line-height: 1.8; margin: 20px 0; }
+        button { 
+            background: #e67e22; 
+            color: white; 
+            border: none; 
+            padding: 15px 40px; 
+            border-radius: 50px; 
+            font-size: 18px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            margin-top: 20px;
+        }
+        button:hover { background: #d35400; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>عيد ميلاد سعيد! 🎂</h1>
+        <p id="message">اضغطي الزر عشان تشوفي مفاجأة صغيرة 😉</p>
+        <button onclick="celebrate()">اضغطي هنا يا مرمر 🎈</button>
+    </div>
+
+    <script>
+        function celebrate() {
+            confetti({ particleCount: 300, spread: 150, origin: { y: 0.6 } });
+            document.getElementById('message').innerHTML = 
+                "ماريا أو مرمر أو خرية.. كل عام وأنتِ بخير! 🌹<br>" + 
+                "صرتي 17.. ديم! 🥳✨<br><br>" + 
+                "أتمنى لكِ عاماً سعيداً مليئاً بالفرحة والسعادة، وأن تحققي فيه كل ما تتمنيه وتكون أيامك كلها نجاح وتألق. 🌟<br>" +
+                "وجودك في حياتي له طعم خاص، وأنا ممتن جداً لأننا أصدقاء. 🤍<br>" +
+                "يا رب تكون سنة الـ 17 هي أجمل سنة عشتيها لحد الآن، وكل سنة وأنتِ معي وبألف خير! 💐🎂";
+        }
+    </script>
+</body>
+</html>
